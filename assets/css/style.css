@@ -1,9 +1,26 @@
+/*Google font style code import*/
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap')
+</style>
+
 /* Asterisk wildcard selector to override default styles added by browser*/
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+/*General Style*/
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*generic project style*/
+    color: #3a3a3a;
+    /*font*/
+    font-family: 'lato'. sans-serif;
+}
+
 
 /*Header*/
 header {
@@ -13,6 +30,8 @@ header {
 /*Main Body*/
 main {
     background-color: lightblue;
+    /*Make main element to take up any surplus space to push footer down*/
+    flex: 1 0 auto;
 }
 
 /*Footer*/
