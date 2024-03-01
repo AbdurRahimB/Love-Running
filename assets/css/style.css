@@ -18,9 +18,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -56,7 +54,7 @@ header a {
     list-style-type: none;
 }
 
-#menu>li {
+#menu > li {
     margin-bottom: 1em;
 }
 
@@ -93,11 +91,14 @@ nav {
 main {
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
+    /* Add margin at the top to prevent content from being covered by the header */
     margin-top: 47px;
+    /* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
 }
 
-
-/* Hero Section */
+/* Hero section */
 #hero {
     height: 600px;
     width: 100%;
@@ -105,8 +106,8 @@ main {
     position: relative;
 }
 
-/* Final rgba value sets the opacity so it is semi-transparent */
 #cover-text {
+    /* Final rgba value sets the opacity so it is semi-transparent */
     background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
     position: absolute;
@@ -117,8 +118,7 @@ main {
     padding-left: 10px;
 }
 
-#cover-text>h2,
-#cover-text>h3 {
+#cover-text > h2, #cover-text > h3 {
     color: #ffffff;
 }
 
@@ -202,6 +202,26 @@ main {
     line-height: 0;
 }
 
+/* Form */
+#signup {
+    background-image: url("../images/signup-image.webp");
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;
+}
+
+#signup-form {
+    color: #ffffff;
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 30px;
+}
+
+#signup-form > h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
 /* Footer */
 #social-networks {
     text-align: center;
@@ -227,7 +247,6 @@ main {
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
-
     /* Header */
     nav {
         display: block;
@@ -241,7 +260,7 @@ main {
         display: flex;
     }
 
-    #menu>li {
+    #menu > li {
         padding-left: 1rem;
     }
 
@@ -285,10 +304,11 @@ main {
         align-self: flex-end;
     }
 
-     /* Gallery */
-     #photos {
+    /* Gallery */
+    #photos {
         column-count: 3;
     }
+
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
@@ -296,21 +316,21 @@ main {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
-     /* Gallery */
-     #photos {
+
+    /* Gallery */
+    #photos {
         column-count: 4;
     }
 }
 
 @media screen and (min-width: 1200px) {
-
     /* Reasons section */
     #benefits {
         display: flex;
         flex-direction: row;
     }
 
-    #benefits>div {
+    #benefits > div {
         flex: 1;
     }
 
