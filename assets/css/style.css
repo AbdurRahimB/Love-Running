@@ -59,7 +59,11 @@ header a {
 }
 
 .active {
-    border-bottom: 1px solid #3a3a3a;
+        border-radius: 10px;
+        background-color: #f16c6b;
+        font-weight: bold;
+        color: aliceblue;
+        padding: 5px;
 }
 
 /* Navbar styles with dropdown toggle */
@@ -362,7 +366,11 @@ main {
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover {
-        border-bottom: 1px solid #3a3a3a;
+        border-radius: 10px;
+        background-color: #f16c6b;
+        color: aliceblue;
+        padding: 5px;
+        box-shadow: #7b7b7b 0px 2px 0px 0px; 
     }
 
     /* Gallery */
